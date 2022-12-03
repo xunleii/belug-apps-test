@@ -15,9 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3.1.0
       - uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # tag=v0.1.15
+        # NOTE: the current `softprops/action-gh-release` is bugged; it creates the releases but
+        #       fails just after
+        continue-on-error: true
         with:
           discussion_category_name: 🔖 ${{ github.ref_name }}
           generate_release_notes: true
+      - run: echo "::debug::Release successfully created... although the previous steps failed"
 
   sync_catalog:
     name: Sync `belug-apps/truecharts-catalog` with ${{ github.ref_name }} release
