@@ -2,6 +2,17 @@
 ## [Unreleased]
 
 
+<a name="v0.0.1-rc.3"></a>
+## [v0.0.1-rc.3] - 2022-12-03
+### Chore
+- **workflows:** cache ASDF
+- **workflows:** manage release on tags
+- **workflows:** fix some linter issues
+
+### Pull Requests
+- Merge pull request [#46](https://github.com/belug-apps/belug-apps/issues/46) from belug-apps/chore/add-release-by-tag-workflow
+
+
 <a name="v0.0.1-rc.2"></a>
 ## [v0.0.1-rc.2] - 2022-12-03
 ### Chore
@@ -163,6 +174,7 @@
 - Merge pull request [#1](https://github.com/belug-apps/belug-apps/issues/1) from belug-apps/feat/add-github-actions
 
 
-[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.2...HEAD
+[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.3...HEAD
+[v0.0.1-rc.3]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.2...v0.0.1-rc.3
 [v0.0.1-rc.2]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.1...v0.0.1-rc.2
 [v0.0.1-rc.1]: https://github.com/belug-apps/belug-apps/compare/v0.0.0...v0.0.1-rc.1
