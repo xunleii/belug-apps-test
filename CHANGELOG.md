@@ -2,8 +2,14 @@
 ## [Unreleased]
 
 
+<a name="v0.1.1"></a>
+## [v0.1.1] - 2022-12-03
+### Fix
+- **workflows:** allow softprops/action-gh-release to fail
+
+
 <a name="v0.1.0"></a>
-## [v0.1.0] - 0001-01-01
+## [v0.1.0] - 2022-12-03
 
 <a name="v0.0.1-rc.3"></a>
 ## [v0.0.1-rc.3] - 2022-12-03
@@ -177,7 +183,8 @@
 - Merge pull request [#1](https://github.com/belug-apps/belug-apps/issues/1) from belug-apps/feat/add-github-actions
 
 
-[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.1.1...HEAD
+[v0.1.1]: https://github.com/belug-apps/belug-apps/compare/v0.1.0...v0.1.1
 [v0.1.0]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.3...v0.1.0
 [v0.0.1-rc.3]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.2...v0.0.1-rc.3
 [v0.0.1-rc.2]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.1...v0.0.1-rc.2
