@@ -1,10 +1,14 @@
 <a name="unreleased"></a>
 ## [Unreleased]
+### Miscellaneous
+- **changelog:** update git-chglog to manage gitmoji commit message
+
+
 
 
 <a name="v0.1.1"></a>
 ## [v0.1.1] - 2022-12-03
-### Fix
+### Fixes
 - **workflows:** allow softprops/action-gh-release to fail
 
 
@@ -13,10 +17,12 @@
 
 <a name="v0.0.1-rc.3"></a>
 ## [v0.0.1-rc.3] - 2022-12-03
-### Chore
+### Fixes
+- **workflows:** fix some linter issues
+
+### Miscellaneous
 - **workflows:** cache ASDF
 - **workflows:** manage release on tags
-- **workflows:** fix some linter issues
 
 ### Pull Requests
 - Merge pull request [#46](https://github.com/belug-apps/belug-apps/issues/46) from belug-apps/chore/add-release-by-tag-workflow
@@ -24,53 +30,52 @@
 
 <a name="v0.0.1-rc.2"></a>
 ## [v0.0.1-rc.2] - 2022-12-03
-### Chore
-- **renovate:** add a better pre-release management
+### Miscellaneous
+- **workflows:** add a better pre-release management
 
 
 <a name="v0.0.1-rc.1"></a>
 ## [v0.0.1-rc.1] - 2022-12-03
-### Chore
-- update and fix upgrade issues
-- configure CHANGELOG generators
-- **charts:** add dynamically injected values
-- **deps:** update github/codeql-action digest to 62b14cb
+### Dependencies
+- **deps:** lock file maintenance
+- **deps:** lock file maintenance
 - **deps:** update dependency golang to v1.19.3
 - **deps:** update dependency node to v18.12.1
-- **deps:** lock file maintenance
 - **deps:** update actions/setup-go action to v3.4.0
-- **deps:** lock file maintenance
 - **deps:** update dependency helm to v3.10.2
-- **develop:** add JUSTFILE to manage development environment
-- **github-actions:** validate 'values.yml' file
-- **renovate:** fix Renovate configuration
-- **renovate:** add configuration for Kubeapps update
-- **tools:** add all required tools for the development environment
-- **workflows:** add main release workflow
-- **workflows:** add manual release workflow
-- **workflows:** add post-merge release workflow
-- **workflows:** add ASDF cache to speedup workflows
-- **workflows:** use actions to commit release
-
-### Feat
-- **charts:** update Kubeapps to latest release
-- **charts:** fix several Helm mistakes
-- **charts:** add api-proxy configuration on TrueScale values
-- **charts:** add NOTES.txt
-- **kubernetes:** add Kubernetes manifests for Belug-Apps
-
-### Fix
-- **api-proxy:** listen on 0.0.0.0 by default
+- **deps:** update github/codeql-action digest to 62b14cb
 - **deps:** update module go.uber.org/zap to v1.24.0
+- **deps:** update Kubeapps to latest release
+
+### Fixes
+- update and fix upgrade issues
+- **workflows:** fix YAML issue
 - **workflows:** pass github token to push step
 - **workflows:** pass secrets to workflow_dispatch
 - **workflows:** use bot access token to push on protected branches
 - **workflows:** check base_ref instead of head_ref
 - **workflows:** use git push directly instead of actions
-- **workflows:** fix YAML issue
+- **api-proxy:** listen on 0.0.0.0 by default
+- **charts:** fix several Helm mistakes
+- **deps:** fix Renovate configuration
 
-### Test
-- **truenas:** mock TrueNAS API for e2e tests
+### Miscellaneous
+- **workflows:** use actions to commit release
+- **workflows:** add ASDF cache to speedup workflows
+- **workflows:** add post-merge release workflow
+- **workflows:** add manual release workflow
+- **workflows:** add main release workflow
+- **workflows:** validate 'values.yml' file
+- configure CHANGELOG generators
+- add JUSTFILE to manage development environment
+- **charts:** add dynamically injected values
+- **charts:** add NOTES.txt
+- **api-proxy:** mock TrueNAS API for e2e tests
+- **deps:** add configuration for Kubeapps update
+- **tools:** add all required tools for the development environment
+
+### New Features
+- **charts:** add api-proxy configuration on TrueScale values
 
 ### Pull Requests
 - Merge pull request [#45](https://github.com/belug-apps/belug-apps/issues/45) from belug-apps/fix/post-merge-workflow
@@ -91,74 +96,68 @@
 
 <a name="v0.0.0"></a>
 ## v0.0.0 - 2022-11-22
-### Chore
-- initialize repository
-- add belug-apps assets
-- update logo assets
-- **ci:** always run security workflows on main
-- **ci:** add worflow to check Dockerfiles
-- **ci:** add worflow to check React component
-- **deps:** update helm release vcluster to v0.12.2
-- **deps:** update github/codeql-action digest to 4fddc51
-- **deps:** update helm release vcluster to v0.13.0
-- **deps:** update github-actions
-- **deps:** use vcluster 1.12.1 for the moment
-- **deps:** add renovate.json
-- **deps:** update github-actions
-- **deps:** use .renovaterc instead of renovate.json
-- **deps:** update actions/checkout action to v3
+### Dependencies
 - **deps:** update github/codeql-action digest to def4f60
-- **github-actions:** tag all version
-- **nodejs:** clean dependencies and add build script
-- **react:** add linter
-- **renovate:** schedule digest update at the end of each month
-- **renovate:** group all github action updates
-- **yamllint:** reduce warn on YAML comments
-- **yamllint:** disable line-lenght checks
-
-### Doc
-- **api-proxy:** update proxy documentation
-
-### Feat
-- add beta belug-apps charts
-- **api-proxy:** add README.md to explain the proxy-api
-- **api-proxy:** add healthcheck route
-- **api-proxy:** move all truenas API call to dedicated route
-- **api-proxy:** add hit mecanism to keep the cache when it used
-- **api-proxy:** implement a simple reverse proxy for TrueNAS
-- **api-proxy:** add Docker image
-- **belug-apps:** add missing chart archive
-- **ci:** add Helm security check
-- **ci:** add YAML lint
-- **ci:** add CI security checks
-- **github-actions:** add workflows related to Golang
-- **react:** implement hostpath component
-- **react:** first implementation of Kubeapps custom component
-
-### Fix
 - **deps:** update module github.com/hashicorp/golang-lru/v2 to v2.0.1
 - **deps:** update module github.com/hashicorp/golang-lru to v2
 - **deps:** update module github.com/hashicorp/golang-lru to v0.6.0
 - **deps:** update module github.com/urfave/cli/v2 to v2.23.5
+- **deps:** update github/codeql-action digest to 4fddc51
+- **deps:** update helm release vcluster to v0.13.0
+- **deps:** update github-actions
+- **deps:** use vcluster 1.12.1 for the moment
 - **deps:** update module github.com/urfave/cli/v2 to v2.23.0
-- **react:** fix all linter issues
+- **deps:** update actions/checkout action to v3
+- **deps:** update github-actions
+- **deps:** update helm release vcluster to v0.12.2
 
-### Hotfix
+### Fixes
+- **kubeapps-component:** fix all linter issues
+- **workflows:** tag all versions
+- **yamllint:** reduce warn on YAML comments
+- **yamllint:** disable line-lenght checks
 - **deps:** fix .renovaterc
 
-### Refact
-- fix some security issues
-- clean YAML issues
-- **proxy-api:** extract CLIAction parth to another file
+### Improvements
+- **proxy-api:** extract CLI.Action part to another file
+- **kubeapps-component:** adapt component for new Kubeapps UI
+- **api-proxy:** move all truenas API call to dedicated route
+- **kubeapps-component:** use functional component
 - **proxy-api:** move proxy-api to src/ directory
+- clean YAML issues
+- **kubeapps-component:** simplify as much as possible all components
 - **proxy-api:** move all middlewares to their dedicated method
-- **react:** add better selection and error management
-- **react:** adapt component for new Kubeapps UI
-- **react:** use functional component
-- **react:** simplify as much as possible all components
 
-### Test
+### Miscellaneous
+- **kubeapps-component:** clean dependencies and add build script
+- update logo assets
+- add belug-apps assets
+- **api-proxy:** update proxy documentation
+- **api-proxy:** add README.md to explain the proxy-api
+- **kubeapps-component:** add better selection and error management
+- **deps:** schedule digest update at the end of each month
+- **deps:** group all github action updates
+- **deps:** use .renovaterc instead of renovate.json
+- **deps:** add renovate.json
+- **api-proxy:** add healthcheck route
 - **proxy-api:** add e2e test for the proxy API
+- **kubeapps-component:** add linter
+- **workflows:** always run security workflows on main
+- **workflows:** add worflow to check Dockerfiles
+- **workflows:** add worflow to check React component
+- **workflows:** add workflows related to Golang
+- **workflows:** add Helm security check
+- **workflows:** add YAML lint
+- **workflows:** add workflows for security checks
+- **vcluster:** add missing chart archive
+
+### New Features
+- **api-proxy:** add hit mecanism to keep the cache when it used
+- **api-proxy:** implement a simple reverse proxy for TrueNAS
+- **kubeapps-component:** implement hostpath component
+
+### Security
+- fix some security issues
 
 ### Pull Requests
 - Merge pull request [#29](https://github.com/belug-apps/belug-apps/issues/29) from belug-apps/renovate/github-codeql-action-digest

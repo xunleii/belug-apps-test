@@ -1,4 +1,3 @@
----
 style: github
 template: CHANGELOG.tpl.md
 info:
@@ -6,9 +5,149 @@ info:
   repository_url: https://github.com/belug-apps/belug-apps
 options:
   commits:
+    filters:
+      Type:
+        - ':adhesive_bandage:'
+        - ':alien:'
+        - ':ambulance:'
+        - ':arrow_down:'
+        - ':arrow_up:'
+        - ':art:'
+        - ':beers:'
+        - ':bento:'
+        - ':boom:'
+        - ':bricks:'
+        - ':bug:'
+        - ':building_construction:'
+        - ':bulb:'
+        - ':busts_in_silhouette:'
+        - ':camera_flash:'
+        - ':card_file_box:'
+        - ':chart_with_upwards_trend:'
+        - ':children_crossing:'
+        - ':closed_lock_with_key:'
+        - ':clown_face:'
+        - ':coffin:'
+        - ':construction_worker:'
+        - ':dizzy:'
+        - ':egg:'
+        - ':fire:'
+        - ':globe_with_meridians:'
+        - ':goal_net:'
+        - ':green_heart:'
+        - ':hammer:'
+        - ':heavy_minus_sign:'
+        - ':heavy_plus_sign:'
+        - ':iphone:'
+        - ':label:'
+        - ':lipstick:'
+        - ':lock:'
+        - ':loud_sound:'
+        - ':mag:'
+        - ':memo:'
+        - ':money_with_wings:'
+        - ':monocle_face:'
+        - ':mute:'
+        - ':necktie:'
+        - ':package:'
+        - ':page_facing_up:'
+        - ':passport_control:'
+        - ':pencil2:'
+        - ':poop:'
+        - ':pushpin:'
+        - ':recycle:'
+        - ':rewind:'
+        - ':rotating_light:'
+        - ':safety_vest:'
+        - ':seedling:'
+        - ':see_no_evil:'
+        - ':sparkles:'
+        - ':speech_balloon:'
+        - ':stethoscope:'
+        - ':technologist:'
+        - ':test_tube:'
+        - ':thread:'
+        - ':triangular_flag_on_post:'
+        - ':truck:'
+        - ':twisted_rightwards_arrows:'
+        - ':wastebasket:'
+        - ':wheelchair:'
+        - ':white_check_mark:'
+        - ':wrench:'
+        - ':zap:'
+
   commit_groups:
+    title_maps:
+      ':adhesive_bandage:': Fixes
+      ':alien:': Dependencies
+      ':ambulance:': Fixes
+      ':arrow_down:': Dependencies
+      ':arrow_up:': Dependencies
+      ':art:': Improvements
+      ':beers:': Miscellaneous
+      ':bento:': Miscellaneous
+      ':boom:': Breaking Changes
+      ':bricks:': Improvements
+      ':bug:': Fixes
+      ':building_construction:': Improvements
+      ':bulb:': Miscellaneous
+      ':busts_in_silhouette:': Community
+      ':camera_flash:': Miscellaneous
+      ':card_file_box:': Improvements
+      ':chart_with_upwards_trend:': Miscellaneous
+      ':children_crossing:': Improvements
+      ':closed_lock_with_key:': Security
+      ':clown_face:': Miscellaneous
+      ':coffin:': Miscellaneous
+      ':construction_worker:': Miscellaneous
+      ':dizzy:': Miscellaneous
+      ':egg:': Miscellaneous
+      ':fire:': Miscellaneous
+      ':globe_with_meridians:': Miscellaneous
+      ':goal_net:': Miscellaneous
+      ':green_heart:': Fixes
+      ':hammer:': Miscellaneous
+      ':heavy_minus_sign:': Dependencies
+      ':heavy_plus_sign:': Dependencies
+      ':iphone:': Miscellaneous
+      ':label:': Miscellaneous
+      ':lipstick:': Improvements
+      ':lock:': Security
+      ':loud_sound:': Miscellaneous
+      ':mag:': Miscellaneous
+      ':memo:': Miscellaneous
+      ':money_with_wings:': Community
+      ':monocle_face:': Miscellaneous
+      ':mute:': Miscellaneous
+      ':necktie:': Miscellaneous
+      ':package:': Miscellaneous
+      ':page_facing_up:': Community
+      ':passport_control:': Security
+      ':pencil2:': Fixes
+      ':poop:': Miscellaneous
+      ':pushpin:': Dependencies
+      ':recycle:': Improvements
+      ':rewind:': Miscellaneous
+      ':rotating_light:': Fixes
+      ':safety_vest:': Miscellaneous
+      ':seedling:': Miscellaneous
+      ':see_no_evil:': Miscellaneous
+      ':sparkles:': New Features
+      ':speech_balloon:': Miscellaneous
+      ':stethoscope:': Miscellaneous
+      ':technologist:': Miscellaneous
+      ':test_tube:': Miscellaneous
+      ':thread:': Improvements
+      ':triangular_flag_on_post:': Miscellaneous
+      ':truck:': Miscellaneous
+      ':twisted_rightwards_arrows:': Miscellaneous
+      ':wastebasket:': Miscellaneous
+      ':wheelchair:': Miscellaneous
+      ':white_check_mark:': Miscellaneous
+      ':wrench:': Miscellaneous
+      ':zap:': Improvements
   header:
-    pattern: "^(\\w*)(?:\\(([\\w\\$\\.\\-\\*\\s]*)\\))?\\:\\s(.*)$"
+    pattern: "^(:\\w+:)(?:\\s*\\((.+?)\\):)?\\s*(.*)$"
     pattern_maps:
       - Type
       - Scope
