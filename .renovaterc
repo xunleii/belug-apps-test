@@ -4,45 +4,59 @@
     "config:base",
     ":automergeAll",
     ":automergePr",
+    ":combinePatchMinorReleases",
     ":enableVulnerabilityAlerts",
     ":gitSignOff",
     ":ignoreUnstable",
     ":maintainLockFilesMonthly",
     ":renovatePrefix",
-    ":combinePatchMinorReleases",
+    ":semanticCommitScope(deps)",
     ":separateMultipleMajorReleases"
   ],
   "packageRules": [
+    // custom configuration to support Gitmoji
     {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
+      "matchPackagePatterns": ["*"],
+      "semanticCommitType": ":arrow_up: "
+    },
+    {
+      "matchDepTypes": ["dependencies", "require"],
+      "semanticCommitType": ":green_heart: "
+    },
+
+    // NOTE: group all github-action update together
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
       "groupName": "github-actions",
       "groupSlug": "github-actions"
     },
+
+    // NOTE: group all ASDF update together
     {
-      "matchUpdateTypes": [
-        "digest"
-      ],
-      "schedule": [
-        "on the last day of the month"
-      ]
+      "matchManagers": ["asdf"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "asdf",
+      "groupSlug": "asdf"
+    },
+
+    // NOTE: update digest only once a month
+    {
+      "matchUpdateTypes": ["digest"],
+      "extends": ["schedule:monthly"]
     }
   ],
+
   "regexManagers": [
+    // NOTE: renovate speicif rules to manage charts upgrades inside values.yml file
     {
-      "fileMatch": [
-        "charts\\/.*\\.ya?ml"
-      ],
+      "fileMatch": ["charts\\/.*\\.ya?ml"],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?version: ?\"?(?<currentValue>[^\"\\s]*)\"?\\s"
       ]
     }
   ],
+
   "registryAliases": {
     "bitnami": "https://charts.bitnami.com/bitnami"
   }
