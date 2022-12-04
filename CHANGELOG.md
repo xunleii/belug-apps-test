@@ -1,9 +1,19 @@
 <a name="unreleased"></a>
 ## [Unreleased]
+
+
+
+<a name="v0.2.0-rc.1"></a>
+## [v0.2.0-rc.1] - 2022-12-04
+### Fixes
+- fix YAML lint issues on git-chglog config
+
 ### Miscellaneous
+- **workflows:** update release message using gitmoji
 - **changelog:** update git-chglog to manage gitmoji commit message
 
-
+### Pull Requests
+- Merge pull request [#53](https://github.com/belug-apps/belug-apps/issues/53) from belug-apps/chore/update-release-message
 
 
 <a name="v0.1.1"></a>
@@ -46,6 +56,19 @@
 - **deps:** update github/codeql-action digest to 62b14cb
 - **deps:** update module go.uber.org/zap to v1.24.0
 - **deps:** update Kubeapps to latest release
+- **deps:** update github/codeql-action digest to def4f60
+- **deps:** update module github.com/hashicorp/golang-lru/v2 to v2.0.1
+- **deps:** update module github.com/hashicorp/golang-lru to v2
+- **deps:** update module github.com/hashicorp/golang-lru to v0.6.0
+- **deps:** update module github.com/urfave/cli/v2 to v2.23.5
+- **deps:** update github/codeql-action digest to 4fddc51
+- **deps:** update helm release vcluster to v0.13.0
+- **deps:** update github-actions
+- **deps:** use vcluster 1.12.1 for the moment
+- **deps:** update module github.com/urfave/cli/v2 to v2.23.0
+- **deps:** update actions/checkout action to v3
+- **deps:** update github-actions
+- **deps:** update helm release vcluster to v0.12.2
 
 ### Fixes
 - update and fix upgrade issues
@@ -58,24 +81,66 @@
 - **api-proxy:** listen on 0.0.0.0 by default
 - **charts:** fix several Helm mistakes
 - **deps:** fix Renovate configuration
+- **deps:** fix .renovaterc
+- **kubeapps-component:** fix all linter issues
+- **workflows:** tag all versions
+- **yamllint:** reduce warn on YAML comments
+- **yamllint:** disable line-lenght checks
+
+### Improvements
+- **api-proxy:** move all truenas API call to dedicated route
+- **kubeapps-component:** use functional component
+- **proxy-api:** move proxy-api to src/ directory
+- **proxy-api:** extract CLI.Action part to another file
+- **kubeapps-component:** adapt component for new Kubeapps UI
+- clean YAML issues
+- **kubeapps-component:** simplify as much as possible all components
+- **proxy-api:** move all middlewares to their dedicated method
 
 ### Miscellaneous
+- **kubeapps-component:** add linter
 - **workflows:** use actions to commit release
-- **workflows:** add ASDF cache to speedup workflows
 - **workflows:** add post-merge release workflow
 - **workflows:** add manual release workflow
 - **workflows:** add main release workflow
 - **workflows:** validate 'values.yml' file
+- **workflows:** always run security workflows on main
+- **workflows:** add worflow to check Dockerfiles
+- **workflows:** add ASDF cache to speedup workflows
+- **workflows:** add worflow to check React component
+- **workflows:** add workflows related to Golang
+- **workflows:** add Helm security check
+- **workflows:** add YAML lint
+- **workflows:** add workflows for security checks
+- **api-proxy:** add healthcheck route
+- **deps:** add configuration for Kubeapps update
+- **deps:** schedule digest update at the end of each month
+- **deps:** group all github action updates
+- **deps:** use .renovaterc instead of renovate.json
+- **deps:** add renovate.json
+- **tools:** add all required tools for the development environment
+- **api-proxy:** mock TrueNAS API for e2e tests
+- **kubeapps-component:** add better selection and error management
+- **api-proxy:** update proxy documentation
+- **api-proxy:** add README.md to explain the proxy-api
+- **charts:** add NOTES.txt
+- update logo assets
+- add belug-apps assets
+- **proxy-api:** add e2e test for the proxy API
 - configure CHANGELOG generators
 - add JUSTFILE to manage development environment
 - **charts:** add dynamically injected values
-- **charts:** add NOTES.txt
-- **api-proxy:** mock TrueNAS API for e2e tests
-- **deps:** add configuration for Kubeapps update
-- **tools:** add all required tools for the development environment
+- **kubeapps-component:** clean dependencies and add build script
+- **vcluster:** add missing chart archive
 
 ### New Features
+- **api-proxy:** add hit mecanism to keep the cache when it used
+- **api-proxy:** implement a simple reverse proxy for TrueNAS
 - **charts:** add api-proxy configuration on TrueScale values
+- **kubeapps-component:** implement hostpath component
+
+### Security
+- fix some security issues
 
 ### Pull Requests
 - Merge pull request [#45](https://github.com/belug-apps/belug-apps/issues/45) from belug-apps/fix/post-merge-workflow
@@ -92,74 +157,6 @@
 - Merge pull request [#35](https://github.com/belug-apps/belug-apps/issues/35) from belug-apps/renovate/github-codeql-action-digest
 - Merge pull request [#34](https://github.com/belug-apps/belug-apps/issues/34) from belug-apps/renovate/go.uber.org-zap-1.x
 - Merge pull request [#33](https://github.com/belug-apps/belug-apps/issues/33) from belug-apps/feat/environment-to-develop
-
-
-<a name="v0.0.0"></a>
-## v0.0.0 - 2022-11-22
-### Dependencies
-- **deps:** update github/codeql-action digest to def4f60
-- **deps:** update module github.com/hashicorp/golang-lru/v2 to v2.0.1
-- **deps:** update module github.com/hashicorp/golang-lru to v2
-- **deps:** update module github.com/hashicorp/golang-lru to v0.6.0
-- **deps:** update module github.com/urfave/cli/v2 to v2.23.5
-- **deps:** update github/codeql-action digest to 4fddc51
-- **deps:** update helm release vcluster to v0.13.0
-- **deps:** update github-actions
-- **deps:** use vcluster 1.12.1 for the moment
-- **deps:** update module github.com/urfave/cli/v2 to v2.23.0
-- **deps:** update actions/checkout action to v3
-- **deps:** update github-actions
-- **deps:** update helm release vcluster to v0.12.2
-
-### Fixes
-- **kubeapps-component:** fix all linter issues
-- **workflows:** tag all versions
-- **yamllint:** reduce warn on YAML comments
-- **yamllint:** disable line-lenght checks
-- **deps:** fix .renovaterc
-
-### Improvements
-- **proxy-api:** extract CLI.Action part to another file
-- **kubeapps-component:** adapt component for new Kubeapps UI
-- **api-proxy:** move all truenas API call to dedicated route
-- **kubeapps-component:** use functional component
-- **proxy-api:** move proxy-api to src/ directory
-- clean YAML issues
-- **kubeapps-component:** simplify as much as possible all components
-- **proxy-api:** move all middlewares to their dedicated method
-
-### Miscellaneous
-- **kubeapps-component:** clean dependencies and add build script
-- update logo assets
-- add belug-apps assets
-- **api-proxy:** update proxy documentation
-- **api-proxy:** add README.md to explain the proxy-api
-- **kubeapps-component:** add better selection and error management
-- **deps:** schedule digest update at the end of each month
-- **deps:** group all github action updates
-- **deps:** use .renovaterc instead of renovate.json
-- **deps:** add renovate.json
-- **api-proxy:** add healthcheck route
-- **proxy-api:** add e2e test for the proxy API
-- **kubeapps-component:** add linter
-- **workflows:** always run security workflows on main
-- **workflows:** add worflow to check Dockerfiles
-- **workflows:** add worflow to check React component
-- **workflows:** add workflows related to Golang
-- **workflows:** add Helm security check
-- **workflows:** add YAML lint
-- **workflows:** add workflows for security checks
-- **vcluster:** add missing chart archive
-
-### New Features
-- **api-proxy:** add hit mecanism to keep the cache when it used
-- **api-proxy:** implement a simple reverse proxy for TrueNAS
-- **kubeapps-component:** implement hostpath component
-
-### Security
-- fix some security issues
-
-### Pull Requests
 - Merge pull request [#29](https://github.com/belug-apps/belug-apps/issues/29) from belug-apps/renovate/github-codeql-action-digest
 - Merge pull request [#31](https://github.com/belug-apps/belug-apps/issues/31) from belug-apps/feat/add-proxy-image
 - Merge pull request [#27](https://github.com/belug-apps/belug-apps/issues/27) from belug-apps/refact/use-functional-component
@@ -182,7 +179,11 @@
 - Merge pull request [#1](https://github.com/belug-apps/belug-apps/issues/1) from belug-apps/feat/add-github-actions
 
 
-[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.1.1...HEAD
+<a name="v0.0.0"></a>
+## v0.0.0 - 2022-10-22
+
+[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.2.0-rc.1...HEAD
+[v0.2.0-rc.1]: https://github.com/belug-apps/belug-apps/compare/v0.1.1...v0.2.0-rc.1
 [v0.1.1]: https://github.com/belug-apps/belug-apps/compare/v0.1.0...v0.1.1
 [v0.1.0]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.3...v0.1.0
 [v0.0.1-rc.3]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.2...v0.0.1-rc.3
