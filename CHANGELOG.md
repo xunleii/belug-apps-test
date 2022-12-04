@@ -3,6 +3,22 @@
 
 
 
+<a name="v0.2.0-rc.2"></a>
+## [v0.2.0-rc.2] - 2022-12-04
+### Dependencies
+- **deps:** Update asdf-vm/actions digest to 707e84f
+
+### Fixes
+- **deps:** Update module github.com/urfave/cli/v2 to v2.23.6
+
+### Miscellaneous
+- **deps:** use gitmoji with Renovate
+
+### Pull Requests
+- Merge pull request [#54](https://github.com/belug-apps/belug-apps/issues/54) from belug-apps/renovate/asdf-vm-actions-digest
+- Merge pull request [#56](https://github.com/belug-apps/belug-apps/issues/56) from belug-apps/renovate/github.com-urfave-cli-v2-2.x
+
+
 <a name="v0.2.0-rc.1"></a>
 ## [v0.2.0-rc.1] - 2022-12-04
 ### Fixes
@@ -182,7 +198,8 @@
 <a name="v0.0.0"></a>
 ## v0.0.0 - 2022-10-22
 
-[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.2.0-rc.1...HEAD
+[Unreleased]: https://github.com/belug-apps/belug-apps/compare/v0.2.0-rc.2...HEAD
+[v0.2.0-rc.2]: https://github.com/belug-apps/belug-apps/compare/v0.2.0-rc.1...v0.2.0-rc.2
 [v0.2.0-rc.1]: https://github.com/belug-apps/belug-apps/compare/v0.1.1...v0.2.0-rc.1
 [v0.1.1]: https://github.com/belug-apps/belug-apps/compare/v0.1.0...v0.1.1
 [v0.1.0]: https://github.com/belug-apps/belug-apps/compare/v0.0.1-rc.3...v0.1.0
