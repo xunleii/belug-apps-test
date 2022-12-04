@@ -87,6 +87,6 @@ jobs:
         with:
           author_name: belug-apps[bot]
           author_email: 116495032+belug-apps[bot]@users.noreply.github.com
-          message: Release Belug-Apps v${{ inputs.version }}
+          message: ":bookmark: release Belug-Apps v${{ inputs.version }}"
           push: ${{ ! inputs.dryRun }}
           tag: v${{ inputs.version }}
